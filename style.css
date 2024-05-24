@@ -64,14 +64,11 @@ header {
   display: inline-block;
   width: 100%;
 }
-.iconMain {
-  margin-top: 10%;
-  margin-right: 10%;
-}
+
 .icon {
   display: inline-block;
   color: black;
-  font-size: 40px;
+  font-size: 20px;
   cursor: pointer;
   margin: 25px;
   transition: transform 0.3s ease;
@@ -86,8 +83,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* display: flex; */
-  /* justify-content: space-between; */
 }
 #headerContents:hover #intro {
   transform: rotateY(360deg);
@@ -222,26 +217,17 @@ h3:hover {
     flex-direction: column;
   }
   .carousel-inner {
-    margin: 5px;
+    margin: 1px;
   }
 }
 .carousel-item {
   text-align: center;
-  padding: 50px;
 }
 .projects {
-  width: 50%;
-  padding: 20px;
+  width: 100%;
   border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
-  margin: 10px;
-}
-.Item1 {
-  text-align: center;
-  width: 200px;
-  margin: 10px;
-  border-radius: 20px;
 }
 .carousel-control-prev-icon {
   background-color: red;
@@ -250,10 +236,10 @@ h3:hover {
   background-color: red;
 }
 #project-control-prev {
-  margin-left: 10%;
+  margin: 0;
 }
 #project-control-next {
-  margin-right: 10%;
+  margin: 0;
 }
 #project-container {
   display: flex;
@@ -268,6 +254,15 @@ h3:hover {
   list-style: none;
   padding: 0;
   margin: 40px 0;
+}
+.timeline-content{
+  text-align: center;
+  width: 100%;
+}
+.timeline-content::after{
+  content: "";
+  display: inline-block;
+  width: 100%;
 }
 .timeline li {
   position: relative;
@@ -367,10 +362,10 @@ h3:hover {
   align-items: center;
 }
 #award-control-prev {
-  margin-left: 10%;
+  margin:0; 
 }
 #award-control-next {
-  margin-right: 10%;
+  margin: 0;
 }
 #award-control-prev-icon {
   filter: invert(100%);
@@ -381,7 +376,7 @@ h3:hover {
   background-color: transparent !important;
 }
 .award {
-  width: 50%;
+  width: 100%;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -397,6 +392,12 @@ h3:hover {
 }
 #footer-contact {
   text-align: center;
+  width: 100%;
+}
+#footer-content::after{
+  content: "";
+  display: inline-block;
+  width: 100%;
 }
 footer {
   flex-direction: column;
