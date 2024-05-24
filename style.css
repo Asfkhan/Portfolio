@@ -7,7 +7,9 @@ body {
   max-width: 100%;
   margin: 0 auto;
   padding: 20px;
+  text-align: center;
 }
+
 @media only screen and (max-width: 600px) {
   .responsive {
     padding: 10px;
@@ -16,12 +18,22 @@ body {
 * {
   box-sizing: border-box;
 }
+h1 {
+  display: flex;
+  position: relative;
+  left: 20%;
+}
 
 .main {
   display: flex;
   flex-wrap: nowrap;
 }
-
+#header-content {
+  text-align: center;
+}
+header {
+  width: 100%;
+}
 #intro {
   margin: 5%;
   font-size: medium;
@@ -55,37 +67,42 @@ body {
 #headerContents:hover #intro {
   transform: rotateY(360deg);
 }
-#mainContent1 {
-  margin-top: 5%;
-  font-weight: lighter;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: space-between;
+img {
+  max-width: 100%;
+  height: auto;
 }
-#mainContent2 {
+#mainContent1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.mainContent1Container {
+  text-align: justify;
+}
+h3 {
   width: 100%;
   position: relative;
   transition: width 5s;
   animation: identifier 5s linear 2s infinite;
 }
-#mainContent2:hover {
+h3:hover {
   width: 100%;
 }
 @keyframes identifier {
   0% {
-    color: darkcyan;
+    color: darkblue;
   }
   25% {
-    color: darkorange;
+    color: darkmagenta;
   }
   50% {
-    color: orchid;
+    color: darkcyan;
   }
   75% {
-    color: darkgreen;
+    color: lightsalmon;
   }
   100% {
-    color: crimson;
+    color: olivedrab;
   }
 }
 .table {
@@ -100,28 +117,28 @@ body {
 }
 
 .dot1 {
-  width: 60px;
-  height: 70px;
+  width: 30px;
+  height: 35px;
   rotate: 30deg;
-  margin-left: 20%;
+  margin-right: 5px;
   background-color: lightgreen;
   border-radius: 50%;
   border: 3px solid black;
   display: inline-block;
 }
 .dot2 {
-  width: 60px;
-  height: 70px;
+  width: 30px;
+  height: 35px;
   rotate: 30deg;
-  margin-left: 20%;
+  margin-right: 5px;
   background-color: lightcoral;
   border-radius: 50%;
   border: 3px solid black;
   display: inline-block;
 }
 .dot3 {
-  width: 60px;
-  height: 70px;
+  width: 30px;
+  height: 35px;
   rotate: 30deg;
   margin-right: 5px;
   background-color: purple;
@@ -130,17 +147,33 @@ body {
   display: inline-block;
 }
 .dot4 {
-  width: 60px;
-  height: 80px;
-  rotate: 70deg;
-  margin-right: 6px;
+  width: 30px;
+  height: 35px;
+  rotate: 30deg;
+  margin-right: 5px;
   background-color: yellow;
   border-radius: 50%;
   border: 3px solid black;
   display: inline-block;
 }
-
-
+#myProject {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.carousel-inner {
+  flex: 1 1 200px;
+  margin: 10px;
+  box-sizing: border-box;
+}
+@media (max-width: 600px) {
+  #myProject {
+    flex-direction: column;
+  }
+  .carousel-inner {
+    margin: 5px;
+  }
+}
 .carousel-item {
   text-align: center;
   padding: 50px;
@@ -178,7 +211,7 @@ body {
 }
 .timeline {
   list-style: none;
-  padding:0;
+  padding: 0;
   margin: 40px 0;
 }
 .timeline li {
@@ -195,7 +228,7 @@ body {
   color: blue;
   cursor: pointer;
 }
-.more{
+.more {
   display: none;
 }
 .timeline li::before {
@@ -214,17 +247,17 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .timeline li {
-      max-width: 90%;
+    max-width: 90%;
   }
   .timeline li:nth-child(odd) {
-      margin-left: 0;
+    margin-left: 0;
   }
 }
 
 .timeline li:hover {
   background-color: plum;
 }
- 
+
 .dialog {
   display: none;
   z-index: 1;
@@ -255,6 +288,16 @@ body {
   color: darkred;
   text-decoration: none;
   cursor: pointer;
+}
+#myAwardSlide {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media (max-width: 600px) {
+  #myAwardSlide {
+    flex-direction: column;
+  }
 }
 #awards-container {
   display: flex;
