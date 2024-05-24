@@ -17,6 +17,23 @@ document.addEventListener("DOMContentLoaded", function() {
         window.open("https://www.linkedin.com/in/aseef-khan","_blank")
     })
 })
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("email-icon2").addEventListener("click", function() {
+        window.location.href = "mailto:ak5488919@gmail.com";
+    })
+
+    document.getElementById("whatsapp-icon2").addEventListener("click", function() {
+        window.open("https://wa.me/7498185184", "_blank")
+    })
+
+    document.getElementById("github-icon2").addEventListener("click", function() {
+        window.open("https://github.com/asfkhan", "_blank")
+        })
+
+    document.getElementById("linkedin-icon2").addEventListener("click", function(){
+        window.open("https://www.linkedin.com/in/aseef-khan","_blank")
+    })
+})
 
 function toggleText(element) {
 var moreText = element.previousElementSibling;
