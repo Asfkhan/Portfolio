@@ -87,7 +87,7 @@ header {
   transform: rotateY(360deg);
 }
 img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
 }
 #mainContent1 {
