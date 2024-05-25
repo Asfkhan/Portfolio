@@ -51,12 +51,11 @@ header {
 }
 #intro {
   text-align: center;
-  margin: 5%;
   font-size: medium;
   font-family: monospace;
   font-weight: bolder;
-  display: inline-flex;
-  justify-content: space-between;
+  /* display: inline-flex; */
+  /* justify-content: space-between; */
   transition: 1s;
 }
 #intro::after{
@@ -329,10 +328,10 @@ h3:hover {
 }
 .dialogContent {
   background-color: lightcyan;
-  margin: 15% auto;
+  margin: auto;
   padding: 20px;
-  border: 2px solid rebeccapurple;
-  width: 50%;
+  border: 8px solid rebeccapurple;
+  width: 100%;
 }
 .close {
   float: right;
@@ -385,8 +384,8 @@ h3:hover {
 }
 
 .award img {
-  width: 200px;
-  height: 250px;
+  width: auto;
+  height: auto;
   border-radius: 5%;
   margin-bottom: 10px;
 }
