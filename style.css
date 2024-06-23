@@ -1,6 +1,6 @@
 body {
   background-color: lightcyan;
-  margin: 0;
+  /* margin: 0; */
   padding: 0;
 }
 .responsive {
@@ -13,7 +13,6 @@ body {
   justify-content: center;
   align-items: center;
 }
-
 @media only screen and (max-width: 600px) {
   .responsive {
     padding: 10px;
@@ -27,10 +26,32 @@ h1 {
   position: relative;
   left: 20%;
 }
-
+ul li{
+  list-style: none;
+}
 .main {
   display: flex;
   flex-wrap: nowrap;
+}
+#greet{
+  animation: shake 0.5s ease-in infinite ;
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .intro {
@@ -81,15 +102,20 @@ img {
   justify-content: center;
   align-items: center;
 }
-#mainContent2 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+
 .mainContent1Container {
   text-align:center;
   width: 100%;
+  animation: entry1 1s forwards;
+  }
+
+@keyframes entry1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 .mainContent1Container::after{
   content: "";
@@ -100,17 +126,30 @@ h3 {
   width: 100%;
   position: relative;
   transition: width 5s;
-  animation: identifier 5s linear 2s infinite;
+  animation: identifier 5s linear 2s infinite , h3entry 1s forwards ;
+}
+@keyframes h3entry {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.mainContent1Container::after{
+  content: "";
+  display: inline-block;
+  width: 100%;
 }
 h3:hover {
   width: 100%;
 }
 @keyframes identifier {
   0% {
-    color: darkblue;
+    color: red;
   }
   25% {
-    color: darkmagenta;
+    color: lightgreen;
   }
   50% {
     color: darkcyan;
@@ -119,24 +158,20 @@ h3:hover {
     color: lightsalmon;
   }
   100% {
-    color: olivedrab;
+    color: ghostwhite;
   }
 }
-.table {
-  width: 100%;
-  text-align: center;
-  margin: 0 auto;
+#h3experienceID{
+  animation: experienceEntry 1s forwards;
 }
-.table::after{
-  content: "";
-  display: inline-block;
-  width: 100%;
-}
-.content {
-  width: 80%;
-}
-* {
-  box-sizing: border-box;
+@keyframes experienceEntry {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+  
 }
 
 .dot1 {
@@ -148,6 +183,15 @@ h3:hover {
   border-radius: 50%;
   border: 3px solid black;
   display: inline-block;
+  animation: entry2 1s forwards;
+}
+@keyframes entry2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(0);
+  }
 }
 .dot2 {
   width: 30px;
@@ -158,6 +202,15 @@ h3:hover {
   border-radius: 50%;
   border: 3px solid black;
   display: inline-block;
+  animation: entry3 1s forwards;
+}
+@keyframes entry3 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(0);
+  }
 }
 .dot3 {
   width: 30px;
@@ -168,6 +221,15 @@ h3:hover {
   border-radius: 50%;
   border: 3px solid black;
   display: inline-block;
+  transform: translateY(-100%);
+}
+@keyframes entry4 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100%{
+    transform: translateY(0);
+  }
 }
 .dot4 {
   width: 30px;
@@ -184,34 +246,30 @@ h3:hover {
   justify-content: center;
   align-items: center;
 }
-.carousel-inner {
-  text-align: center;
-  width: 100%;
-  flex: 1 1 200px;
-  margin: 10px;
-  box-sizing: border-box;
-}
-.carousel-inner{
-  content: "";
-  display: inline-block;
-  width: 100%;
-}
 @media (max-width: 600px) {
   #myProject {
     flex-direction: column;
   }
-  .carousel-inner {
-    margin: 1px;
-  }
 }
-.carousel-item {
-  text-align: center;
+#project-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 70%;
+  margin: auto;
+  background-color: teal;
+  color: white;
 }
-.projects {
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  text-align: center;
+
+#project-container img{
+  border-radius: 3%;
+  cursor: pointer;
+}
+#project-control-prev {
+  margin:0; 
+}
+#project-control-next {
+  margin: 0;
 }
 .carousel-control-prev-icon {
   background-color: red;
@@ -219,17 +277,15 @@ h3:hover {
 .carousel-control-next-icon {
   background-color: red;
 }
-#project-control-prev {
-  margin: 0;
+.projects {
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  margin: 10px;
 }
-#project-control-next {
-  margin: 0;
-}
-#project-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+
 .timeline {
   display: flex;
   flex-direction: column;
@@ -259,7 +315,7 @@ h3:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .read-more {
-  color: blue;
+  color: royalblue;
   cursor: pointer;
 }
 .more {
@@ -279,12 +335,45 @@ h3:hover {
 .timeline li .timeline-content {
   margin-top: 10px;
 }
+.event{
+  transform: translateX(100%);
+  transition: transform 5s ease;
+}
+.event.animate {
+  animation: continue 1s ease-in infinite;
+}
+@keyframes continue {
+  0% {
+    transform: scale(0.9);
+  }
+  25% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.0);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+
+}
+@keyframes entryd1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
 @media only screen and (max-width: 768px) {
   .timeline li {
     max-width: 90%;
   }
   .timeline li:nth-child(odd) {
-    margin-left: 0;
+    margin-left: 0
   }
 }
 
@@ -343,6 +432,10 @@ h3:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  width: 70%;
+  margin: auto;
+  background-color: #071952;
+  color: white;
 }
 #award-control-prev {
   margin:0; 
