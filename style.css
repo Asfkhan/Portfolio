@@ -38,18 +38,23 @@ ul li{
 }
 @keyframes shake {
   0% {
+    color: red;
     transform: translateX(0);
   }
   25% {
+    color: lightgreen;
     transform: translateX(-5px);
   }
   50% {
+    color: darkcyan;
     transform: translateX(5px);
   }
   75% {
+    color: lightsalmon;
     transform: translateX(-5px);
   }
   100% {
+    color: ghostwhite;
     transform: translateX(0);
   }
 }
@@ -221,14 +226,13 @@ h3:hover {
   border-radius: 50%;
   border: 3px solid black;
   display: inline-block;
-  transform: translateY(-100%);
 }
 @keyframes entry4 {
   0% {
-    transform: translateY(-100%);
+    transform: translateX(-100%);
   }
   100%{
-    transform: translateY(0);
+    transform: translateX(0);
   }
 }
 .dot4 {
@@ -255,15 +259,10 @@ h3:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 70%;
+  width: 100%;
   margin: auto;
   background-color: teal;
   color: white;
-}
-
-#project-container img{
-  border-radius: 3%;
-  cursor: pointer;
 }
 #project-control-prev {
   margin:0; 
@@ -280,12 +279,35 @@ h3:hover {
 .projects {
   width: 100%;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid burlywood;
   border-radius: 5px;
   text-align: center;
   margin: 10px;
 }
-
+#project-container img{
+  border-radius: 3%;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+  animation: heartbeat 5s ease-in infinite ;
+}
+@keyframes heartbeat {
+  0% {
+    transform: scale(0.9);
+  }
+  25% {
+    transform: scale(1.0);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  75% {
+    transform: scale(1.0);
+  }
+  100% {
+    transform: scale(0.9);
+  }
+}
 .timeline {
   display: flex;
   flex-direction: column;
@@ -315,7 +337,8 @@ h3:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .read-more {
-  color: royalblue;
+  color: red;
+  font-size: 25px;
   cursor: pointer;
 }
 .more {
@@ -432,7 +455,7 @@ h3:hover {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 70%;
+  width: 100%;
   margin: auto;
   background-color: #071952;
   color: white;
