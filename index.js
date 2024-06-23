@@ -60,17 +60,6 @@ window.addEventListener("scroll", () => {
 });
 const exentry = document.querySelectorAll(".h3experienceID");
 window.addEventListener("scroll", () => {
-<<<<<<< HEAD
-  exentry.forEach((exentry) => {
-    const scrollPosition = window.scrollY + window.innerHeight;
-    const h3ex = exentry.offsetTop;
-
-    if (scrollPosition > h3ex) {
-      exentry.style.animation = "experienceEntry 1s forwards";
-    } 
-  });
-});
-=======
     exentry.forEach((exentry) => {
       const scrollPosition = window.scrollY + window.innerHeight;
       const h3ex = exentry.offsetTop;
@@ -82,7 +71,6 @@ window.addEventListener("scroll", () => {
       }
     });
   });
->>>>>>> b4380bfa5e879c856c41fd08455fd926ffcf0ef3
 
 document.addEventListener("DOMContentLoaded", function () {
   document.getElementById("email-icon2").addEventListener("click", function () {
