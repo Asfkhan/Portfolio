@@ -26,11 +26,12 @@ const dots = document.querySelectorAll(".dot3");
 
 window.addEventListener("scroll", () => {
   dots.forEach((dot) => {
-    const scrollPosition = window.scrollY + window.innerHeight;
+    const scrollPosition = window.scrollX + window.innerHeight;
     const dotTop = dot.offsetTop;
 
     if (scrollPosition > dotTop) {
       dot.style.animation = "entry4 1s forwards";
+      dot.style.transform =  "translateX(-100%)";
     }
   });
 });
