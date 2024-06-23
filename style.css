@@ -284,7 +284,7 @@ h3:hover {
   text-align: center;
   margin: 10px;
 }
-#project-container img{
+.projects figure a img{
   border-radius: 3%;
   cursor: pointer;
   width: auto;
