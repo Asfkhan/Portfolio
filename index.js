@@ -107,74 +107,83 @@ function toggleText(element) {
     element.textContent = "See More";
   }
 }
-
-var dialogBoxnew = document.getElementById("latestdialogBox");
-var eventLinew = document.getElementById("latest");
-var closeBtnnew = document.getElementsByClassName("close")[0];
-eventLinew.onclick = function () {
-  dialogBoxnew.style.display = "block";
+var dialogBox2026 = document.getElementById("newdialogBox");
+var eventLi2026 = document.getElementById("new");
+var closeBtn2026 = document.getElementsByClassName("close")[0];
+eventLi2026.onclick = function () {
+  dialogBox2026.style.display = "block";
 };
-closeBtnnew.onclick = function () {
-  dialogBoxnew.style.display = "none";
+closeBtn2026.onclick = function () {
+  dialogBox2026.style.display = "none";
 };
 
-var dialogBox1 = document.getElementById("firstdialogBox");
-var eventLi1 = document.getElementById("first");
-var closeBtn1 = document.getElementsByClassName("close")[1];
+var dialogBox2025 = document.getElementById("dialogBox2025");
+var eventLi2025 = document.getElementById("latest2025");
+var closeBtn2025 = document.getElementsByClassName("close")[1];
+eventLi2025.onclick = function () {
+  dialogBox2025.style.display = "block";
+};
+closeBtn2025.onclick = function () {
+  dialogBox2025.style.display = "none";
+};
+
+var dialogBox1 = document.getElementById("seconddialogBox");
+var eventLi1 = document.getElementById("second");
+var closeBtn1 = document.getElementsByClassName("close")[2];
 eventLi1.onclick = function () {
   dialogBox1.style.display = "block";
 };
 closeBtn1.onclick = function () {
   dialogBox1.style.display = "none";
 };
-var dialogBox2 = document.getElementById("seconddialogBox");
-var eventLi2 = document.getElementById("second");
-var closeBtn2 = document.getElementsByClassName("close")[2];
+var dialogBox2 = document.getElementById("thirddialogBox");
+var eventLi2 = document.getElementById("third");
+var closeBtn2 = document.getElementsByClassName("close")[3];
 eventLi2.onclick = function () {
   dialogBox2.style.display = "block";
 };
 closeBtn2.onclick = function () {
   dialogBox2.style.display = "none";
 };
-var dialogBox3 = document.getElementById("thirddialogBox");
-var eventLi3 = document.getElementById("third");
-var closeBtn3 = document.getElementsByClassName("close")[3];
+var dialogBox3 = document.getElementById("fourthdialogBox");
+var eventLi3 = document.getElementById("fourth");
+var closeBtn3 = document.getElementsByClassName("close")[4];
 eventLi3.onclick = function () {
   dialogBox3.style.display = "block";
 };
 closeBtn3.onclick = function () {
   dialogBox3.style.display = "none";
 };
-var dialogBox4 = document.getElementById("fourthdialogBox");
-var eventLi4 = document.getElementById("fourth");
-var closeBtn4 = document.getElementsByClassName("close")[4];
+var dialogBox4 = document.getElementById("fifthdialogBox");
+var eventLi4 = document.getElementById("fifth");
+var closeBtn4 = document.getElementsByClassName("close")[5];
 eventLi4.onclick = function () {
   dialogBox4.style.display = "block";
 };
 closeBtn4.onclick = function () {
   dialogBox4.style.display = "none";
 };
-var dialogBox5 = document.getElementById("fifthdialogBox");
-var eventLi5 = document.getElementById("fifth");
-var closeBtn5 = document.getElementsByClassName("close")[5];
+var dialogBox5 = document.getElementById("sixthdialogBox");
+var eventLi5 = document.getElementById("sixth");
+var closeBtn5 = document.getElementsByClassName("close")[6];
 eventLi5.onclick = function () {
   dialogBox5.style.display = "block";
 };
 closeBtn5.onclick = function () {
   dialogBox5.style.display = "none";
 };
-var dialogBox6 = document.getElementById("sixthdialogBox");
-var eventLi6 = document.getElementById("sixth");
-var closeBtn6 = document.getElementsByClassName("close")[6];
+var dialogBox6 = document.getElementById("seventhdialogBox");
+var eventLi6 = document.getElementById("seventh");
+var closeBtn6 = document.getElementsByClassName("close")[7];
 eventLi6.onclick = function () {
   dialogBox6.style.display = "block";
 };
 closeBtn6.onclick = function () {
   dialogBox6.style.display = "none";
 };
-var dialogBox7 = document.getElementById("seventhdialogBox");
-var eventLi7 = document.getElementById("seventh");
-var closeBtn7 = document.getElementsByClassName("close")[7];
+var dialogBox7 = document.getElementById("eighthdialogBox");
+var eventLi7 = document.getElementById("eighth");
+var closeBtn7 = document.getElementsByClassName("close")[8];
 eventLi7.onclick = function () {
   dialogBox7.style.display = "block";
 };
