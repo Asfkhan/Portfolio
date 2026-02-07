@@ -37,30 +37,6 @@ window.addEventListener("scroll", () => {
 });
 const d1 = document.querySelectorAll(".event");
 
-// window.addEventListener("scroll", () => {
-//   d1.forEach((d1) => {
-//     let hasAnimated = false;
-//     const scrollPosition = window.scrollY + window.innerHeight;
-//     const d1Top = d1.offsetTop;
-
-//     if (scrollPosition > d1Top && !hasAnimated) {
-//       d1.style.animation = "entryd1 1s forwards";
-//       d1.style.transform = "transformX(0)";
-//       d1.style.transition = "transform 5s ease" ;
-//       hasAnimated = true;
-
-//       setTimeout(()=>{
-//         d1.style.animation = "continue 5s ease-in infinite";
-//         d1.classList.add('animate-continue');
-//       },1000);
-//     }
-//     else {
-//         d1.style.animation = "";
-//       }
-//   });
-// });
-
-// Initialize animated elements tracking
 const animatedElements = new Set();
 
 // Create Intersection Observer
@@ -102,10 +78,10 @@ window.addEventListener("scroll", () => {
       const h3ex = exentry.offsetTop;
   
       if (scrollPosition > h3ex) {
-        exentry.style.animation = "experienceEntry 1s forwards";
-      } else {
-        exentry.style.animation = "";
-      }
+        exentry.classList.add("rainbow-text");
+        exentry.style.animation = "experienceEntry 1s forwards, identifier 3s infinite ";
+        exentry.style.transform = "translateyx(-100%)";
+      } 
     });
   });
 
