@@ -3,6 +3,7 @@ body {
   /* margin: 0; */
   padding: 0;
 }
+
 /* -------------Deepseek content Starts from here--------------------- */
 
         summary {
@@ -25,7 +26,15 @@ body {
         details[open] summary::before {
             content: "✕";
         }
-        
+
+        .split {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .part1 { flex: 1; background: lightcyan; }
+        .part3 { flex: 3; background: lightcyan; }
+        .split > div { padding: 20px; }
+
 html {
   scroll-behavior: smooth; /* Native smooth scrolling */
 }
@@ -42,7 +51,6 @@ html {
   transform: translateZ(0);
 }
 
-/* -------------Deepseek content Ends Here--------------------- */
 
 .responsive {
   /* display: flex; */
@@ -312,15 +320,14 @@ h3:hover {
   margin: 0;
 }
 .carousel-control-prev-icon {
-  background-color: red;
+  filter: invert(1)
 }
 .carousel-control-next-icon {
-  background-color: red;
+ filter: invert(1)
 }
 .projects {
   width: 100%;
   padding: 20px;
-  border: 1px solid burlywood;
   border-radius: 5px;
   text-align: center;
   margin: 10px;
