@@ -3,7 +3,29 @@ body {
   /* margin: 0; */
   padding: 0;
 }
+/* -------------Deepseek content Starts from here--------------------- */
 
+        summary {
+           cursor: pointer;
+            list-style: none;
+          }
+      
+        /* Hide default arrow */
+        summary::-webkit-details-marker {
+            display: none;
+        }
+        
+        /* Add hamburger icon (☰) */
+        summary::before {
+            content: "☰";
+            margin-right: 10px;
+        }
+        
+        /* Change to X (✕) when open */
+        details[open] summary::before {
+            content: "✕";
+        }
+        
 html {
   scroll-behavior: smooth; /* Native smooth scrolling */
 }
@@ -19,6 +41,9 @@ html {
   backface-visibility: hidden;
   transform: translateZ(0);
 }
+
+/* -------------Deepseek content Starts Ends Here--------------------- */
+
 .responsive {
   /* display: flex; */
   max-width: 100%;
