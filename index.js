@@ -37,6 +37,29 @@ window.addEventListener("scroll", () => {
 });
 const d1 = document.querySelectorAll(".event");
 
+// window.addEventListener("scroll", () => {
+//   d1.forEach((d1) => {
+//     let hasAnimated = false;
+//     const scrollPosition = window.scrollY + window.innerHeight;
+//     const d1Top = d1.offsetTop;
+
+//     if (scrollPosition > d1Top && !hasAnimated) {
+//       d1.style.animation = "entryd1 1s forwards";
+//       d1.style.transform = "transformX(0)";
+//       d1.style.transition = "transform 5s ease" ;
+//       hasAnimated = true;
+
+//       setTimeout(()=>{
+//         d1.style.animation = "continue 5s ease-in infinite";
+//         d1.classList.add('animate-continue');
+//       },1000);
+//     }
+//     else {
+//         d1.style.animation = "";
+//       }
+//   });
+// });
+
 window.addEventListener("scroll", () => {
   d1.forEach((d1) => {
     let hasAnimated = false;
@@ -59,6 +82,9 @@ window.addEventListener("scroll", () => {
       }
   });
 });
+
+
+
 const exentry = document.querySelectorAll(".h3experienceID");
 window.addEventListener("scroll", () => {
     exentry.forEach((exentry) => {
