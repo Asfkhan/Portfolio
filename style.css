@@ -1,10 +1,97 @@
-body {
-  background-color: lightcyan;
-  /* margin: 0; */
-  padding: 0;
+details {
+  color: ghostwhite;
 }
 
 /* -------------Deepseek content Starts from here--------------------- */
+
+
+body {
+  background: linear-gradient(to bottom, #1e3799, #1e3799);
+  position: relative;
+  /* overflow: hidden; */
+}
+
+img {
+  width: clamp(180px, 28vw, 360px) !important;
+  aspect-ratio: 16/9 !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border-radius: 8px !important;
+  background: rgba(245, 245, 245, 0.5) !important;
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+  
+  /* Hover animation */
+  transition: transform 0.4s ease, 
+              box-shadow 0.4s ease,
+              border-color 0.4s ease !important;
+  cursor: pointer !important;
+}
+
+img:hover {
+  transform: scale(1.07) !important;
+  box-shadow: 0 10px 30px ghostwhite !important;
+  border-color: navy !important;
+}
+
+
+body::before,
+body::after {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  animation: waterBubble 8s ease-in-out infinite;
+}
+
+body::before {
+  width: 120px;
+  height: 120px;
+  background: radial-gradient(circle at 30% 30%, 
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.3) 30%,
+    transparent 70%);
+  top: 85%;
+  left: 25%;
+  box-shadow: 
+    0 0 40px rgba(173, 216, 230, 0.5),
+    inset 0 0 20px rgba(255, 255, 255, 0.8);
+  animation-delay: 0s;
+}
+
+body::after {
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle at 40% 40%, 
+    rgba(255, 255, 255, 0.9) 0%,
+    rgba(255, 255, 255, 0.3) 30%,
+    transparent 70%);
+  top: 90%;
+  left: 65%;
+  box-shadow: 
+    0 0 30px rgba(135, 206, 250, 0.5),
+    inset 0 0 15px rgba(255, 255, 255, 0.8);
+  animation-delay: 2s;
+}
+
+@keyframes waterBubble {
+  0% {
+    transform: translateY(100px) scale(0.8);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0) scale(0.9);
+    opacity: 0.7;
+  }
+  90% {
+    transform: translateY(-80vh) scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh) scale(1.1);
+    opacity: 0;
+  }
+}
 
         summary {
            cursor: pointer;
@@ -26,14 +113,6 @@ body {
         details[open] summary::before {
             content: "✕";
         }
-
-        .split {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .part1 { flex: 1; background: lightcyan; }
-        .part3 { flex: 3; background: lightcyan; }
-        .split > div { padding: 20px; }
 
 html {
   scroll-behavior: smooth; /* Native smooth scrolling */
@@ -125,7 +204,7 @@ ul li{
 
 .icon {
   display: flex;
-  color: black;
+  color: white;
   font-size: 20px;
   cursor: pointer;
   margin: 25px;
@@ -228,6 +307,10 @@ h3:hover {
   
 }
 
+.rainbow-text {
+  animation: identifier 3s infinite linear !important;
+}
+
 .dot1 {
   width: 30px;
   height: 35px;
@@ -284,6 +367,7 @@ h3:hover {
     transform: translateX(0);
   }
 }
+
 .dot4 {
   width: 30px;
   height: 35px;
@@ -311,6 +395,7 @@ h3:hover {
   width: 100%;
   margin: auto;
   background-color: teal;
+  border: 1px solid #ccc;
   color: white;
 }
 #project-control-prev {
@@ -506,6 +591,7 @@ h3:hover {
   width: 100%;
   margin: auto;
   background-color: #071952;
+  border: 1px solid #ccc;
   color: white;
 }
 #award-control-prev {
@@ -515,17 +601,14 @@ h3:hover {
   margin: 0;
 }
 #award-control-prev-icon {
-  filter: invert(100%);
-  background-color: transparent !important;
+  filter: invert(1);
 }
 #award-control-next-icon {
-  filter: invert(100%);
-  background-color: transparent !important;
+  filter: invert(1);
 }
 .award {
   width: 100%;
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 5px;
   text-align: center;
   margin: 10px;
@@ -539,6 +622,7 @@ h3:hover {
 }
 #footer-contact {
   text-align: center;
+  color: ghostwhite;
   width: 100%;
 }
 #footer-contact::after{
@@ -548,7 +632,7 @@ h3:hover {
 }
 .icon2 {
   display: inline-block;
-  color: black;
+  color: white;
   font-size: 20px;
   cursor: pointer;
   margin: 25px;
