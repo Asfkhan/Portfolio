@@ -60,27 +60,37 @@ const d1 = document.querySelectorAll(".event");
 //   });
 // });
 
-window.addEventListener("scroll", () => {
-  d1.forEach((d1) => {
-    let hasAnimated = false;
-    const scrollPosition = window.scrollY + window.innerHeight;
-    const d1Top = d1.offsetTop;
+// Initialize animated elements tracking
+const animatedElements = new Set();
 
-    if (scrollPosition > d1Top && !hasAnimated) {
+// Create Intersection Observer
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    const d1 = entry.target;
+    
+    if (entry.isIntersecting && !animatedElements.has(d1)) {
+      animatedElements.add(d1);
+      
+      // Apply initial animation
       d1.style.animation = "entryd1 1s forwards";
-      d1.style.transform = "transformX(0)";
-      d1.style.transition = "transform 5s ease" ;
-      hasAnimated = true;
-
-      setTimeout(()=>{
+      d1.style.transform = "translateX(0)";
+      d1.style.transition = "transform 1s ease";
+      
+      // Add infinite animation after initial completes
+      setTimeout(() => {
         d1.style.animation = "continue 5s ease-in infinite";
         d1.classList.add('animate-continue');
-      },1000);
+      }, 1000);
     }
-    else {
-        d1.style.animation = "";
-      }
   });
+}, {
+  threshold: 0.2, // Trigger when 20% of element is visible
+  rootMargin: "0px 0px -100px 0px" // Adjust trigger point
+});
+
+// Observe all d1 elements
+d1.forEach((element) => {
+  observer.observe(element);
 });
 
 
