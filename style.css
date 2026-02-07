@@ -3,6 +3,22 @@ body {
   /* margin: 0; */
   padding: 0;
 }
+
+html {
+  scroll-behavior: smooth; /* Native smooth scrolling */
+}
+
+/* Or for more control: */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Hardware acceleration for smoother animations */
+.animate-continue {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+}
 .responsive {
   /* display: flex; */
   max-width: 100%;
