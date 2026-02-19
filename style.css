@@ -279,19 +279,19 @@ h3:hover {
 }
 @keyframes identifier {
   0% {
-    color: red;
+    color: palegreen;
   }
   25% {
-    color: lightgreen;
+    color: greenyellow;
   }
   50% {
-    color: darkcyan;
+    color: lime
   }
   75% {
-    color: lightsalmon;
+    color: greenyellow;
   }
   100% {
-    color: ghostwhite;
+    color: springgreen;
   }
 }
 #h3experienceID{
@@ -383,18 +383,28 @@ h3:hover {
   justify-content: center;
   align-items: center;
 }
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   #myProject {
     flex-direction: column;
   }
-}
+} */
 .project-container {
-  display: flex;
+  /* display: flex;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   margin: auto;
   background-color: teal;
+  border: 1px solid #ccc;
+  color: white; */
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  background: teal;
   border: 1px solid #ccc;
   color: white;
 }
@@ -404,6 +414,7 @@ h3:hover {
 #project-control-next {
   margin: 0;
 }
+
 .carousel-control-prev-icon {
   filter: invert(1)
 }
@@ -471,7 +482,6 @@ h3:hover {
 }
 .read-more {
   color: red;
-  font-size: 25px;
   cursor: pointer;
 }
 .more {
@@ -564,7 +574,6 @@ h3:hover {
 }
 .close {
   float: right;
-  font-size: 50px;
   font-weight: bold;
   color: red;
 }
@@ -633,7 +642,7 @@ h3:hover {
 .icon2 {
   display: inline-block;
   color: white;
-  font-size: 20px;
+  /* font-size: 20px; */
   cursor: pointer;
   margin: 25px;
   transition: transform 0.3s ease;
